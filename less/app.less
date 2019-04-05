@@ -3,6 +3,74 @@
 @import "less/medium";
 @import "less/variables";
 
+/**
+ * @font-face declarations
+ * See https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+ */
+
+@font-face {
+    font-family: 'LabGrotesque-Regular';
+
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-Regular.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-Regular.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/LabGrotesque-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LabGrotesque-Italic';
+
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-Italic.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-Italic.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/LabGrotesque-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LabGrotesque-Black';
+
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-Black.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-Black.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/LabGrotesque-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LabGrotesque-BlackItalic';
+
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-BlackItalic.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/LabGrotesque-BlackItalic.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/LabGrotesque-BlackItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TiemposTextWeb-Regular';
+
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-Regular.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-Regular.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/TiemposTextWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TiemposTextWeb-RegularItalic';
+
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-RegularItalic.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/TiemposTextWeb-RegularItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TiemposTextWeb-Bold';
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-Bold.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-Bold.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/TiemposTextWeb-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'TiemposTextWeb-BoldItalic';
+
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-BoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('//media.businessinsider.com/public/fonts/TiemposTextWeb-BoldItalic.woff2') format('woff2'),
+         url('//media.businessinsider.com/public/fonts/TiemposTextWeb-BoldItalic.woff') format('woff');
+}
+
 body {
     font-family: @font-family !important;
     font-size: @base-font-size !important;
@@ -10,14 +78,14 @@ body {
 
 canvas {
     display: none;
-    background: @musicDark;
+    background: #fff;
 }
 
 header {
-    background: @gray-darker;
+    background: #000000;
     margin: 0;
     padding: 25px @grid-gutter-width / 2;
-    color: @gray-lighter;
+    color: #fff;
 
     .home & {
         @media screen and (min-width: 700px){
@@ -35,10 +103,10 @@ header {
     }
 
     a {
-        color: @gray-lighter;
+        color: #fff;
 
         &:hover {
-            color: @gray;
+            color: #fff;
             text-decoration: none;
         }
     }
@@ -54,19 +122,23 @@ header {
         }
 
         a {
+            color: #fff;
             line-height: 32px;
             margin-right: @grid-gutter-width / 2;
-            font-size: 16px;
-            text-transform: lowercase;
+            font-size: 20px;
+            text-transform: uppercase;
             -webkit-font-smoothing: antialiased;
-            opacity: 0.7;
+            border-bottom: 5px;
 
-            &.active { font-weight: bold; }
+            &.active { 
+                font-weight: bold; 
+                border-bottom: 5px #fff solid;
+            }
+
             &:last-child { margin-right: 0; }
 
             &:hover {
-                color: #eee;
-                opacity: 0.5;
+                color: #fff;
             }
 
             @media screen and (min-width: 700px){
@@ -303,4 +375,10 @@ header {
     font-size: 12px;
     font-style: italic;
     margin-top: 6px;
+}
+
+.btn.btn-primary.active {
+    color: black;
+    background: white;
+    border: 1px black solid;
 }

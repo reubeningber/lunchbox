@@ -231,6 +231,75 @@ canvas {
         }
     }
 
+    &.poster-theme5 {
+        background: @theme5-bg-color;
+        color: @theme5-text-color;
+        .logo-wrapper {
+            background: @theme5-bg-color;
+            color: @theme5-text-color;
+            background-image: @theme5-logo-path;
+            background-repeat: no-repeat;
+            background-size: @theme5-sq-logo-width @theme5-sq-logo-height;
+            width: @theme5-sq-logo-width + @padding;
+            height: @theme5-sq-logo-height + @padding;
+
+            .sixteen-by-nine& {
+                background-size: @theme5-16x9-logo-width @theme5-16x9-logo-height;
+                width: @theme5-16x9-logo-width + @padding;
+                height: @theme5-16x9-logo-height + @padding;
+            }
+        }
+        .show-credit {
+            color: @theme5-credit-color;
+        }
+    }
+
+    &.poster-theme6 {
+        background: @theme6-bg-color;
+        color: @theme6-text-color;
+        .logo-wrapper {
+            background: @theme6-bg-color;
+            color: @theme6-text-color;
+            background-image: @theme6-logo-path;
+            background-repeat: no-repeat;
+            background-size: @theme6-sq-logo-width @theme6-sq-logo-height;
+            width: @theme6-sq-logo-width + @padding;
+            height: @theme6-sq-logo-height + @padding;
+
+            .sixteen-by-nine& {
+                background-size: @theme6-16x9-logo-width @theme6-16x9-logo-height;
+                width: @theme6-16x9-logo-width + @padding;
+                height: @theme6-16x9-logo-height + @padding;
+            }
+        }
+        .show-credit {
+            color: @theme6-credit-color;
+        }
+    }
+
+    &.poster-theme7 {
+        background: @theme7-bg-color;
+        color: @theme7-text-color;
+        .logo-wrapper {
+            background: @theme7-bg-color;
+            color: @theme7-text-color;
+            background-image: @theme7-logo-path;
+            background-repeat: no-repeat;
+            background-size: @theme7-sq-logo-width @theme6-sq-logo-height;
+            width: @theme7-sq-logo-width + @padding;
+            height: @theme7-sq-logo-height + @padding;
+
+            .sixteen-by-nine& {
+                background-size: @theme7-16x9-logo-width @theme7-16x9-logo-height;
+                width: @theme7-16x9-logo-width + @padding;
+                height: @theme7-16x9-logo-height + @padding;
+            }
+        }
+        .show-credit {
+            color: @theme6-credit-color;
+        }
+    }
+
     &.sixteen-by-nine {
         height: 360px;
         padding: @padding;
@@ -267,17 +336,6 @@ canvas {
         }
     }
 
-    .quote& {
-        .left-quote {
-            content:@quote-begin-symbol;
-            display: block;
-            position: absolute;
-            top: @padding * 2;
-            left: @padding * 2;
-            font-weight: @quote-font-weight;
-            margin-left: @quote-mark-margin;
-        }
-    }
 
     .left-quote,
     .right-quote {
@@ -285,12 +343,13 @@ canvas {
     }
 
     blockquote {
+        font-family: @quote-font-family;
+        font-weight: @quote-font-weight;
         padding: 0;
         margin: 0 0 @line-height * 2;
         border-left: none;
         font-size: inherit;
         line-height: 100%;
-        font-weight: bold;
         display: block;
         font-feature-settings: "liga" 0;
 
@@ -316,6 +375,10 @@ canvas {
 
         .quote& {
 
+            p:last-child:before {
+                content: @quote-begin-symbol;
+                font-weight: @quote-font-weight;
+            }
             p:last-child:after {
                 content: @quote-end-symbol;
                 font-weight: @quote-font-weight;
@@ -339,7 +402,7 @@ canvas {
     .show-credit {
         display: block;
         text-transform: uppercase;
-        font-size: @base-font-size * 1.2;
+        font-size: 12px;
         margin-top: @credit-margin;
         color: @credit-color;
     }

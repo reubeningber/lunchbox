@@ -12,33 +12,20 @@ var $logoWrapper = null;
 
 var quotes = [
     {
-        "quote": "I'd been drinking.",
-        "source": "Dennis Rodman"
-    },
-    {
-        "quote": "I've made a huge mistake.",
-        "source": "G.O.B."
-    },
-    {
-        "quote": "Yes, I have smoked crack cocaine",
-        "source": "Toronto Mayor Rob Ford",
-        "size": 65
-    },
-    {
-        "quote": "Annyong.",
-        "source": "Annyong",
+        "quote": "Get better everyday",
+        "source": "Henry Blodget", 
         "size": 90
     },
     {
-        "quote": "STEVE HOLT!",
-        "source": "Steve Holt",
-        "size": 65
+        "quote": "Let's leave people with something when they put down their phones.",
+        "source": "Nicholas Carlson", 
+        "size": 38
     },
     {
-        "quote": "Whoa, whoa, whoa. There's still plenty of meat on that bone. Now you take this home, throw it in a pot, add some broth, a potato. Baby, you've got a stew going.",
-        "source": "Carl Weathers",
-        "size": 40
+        "quote": "Life is an adventure.",
+        "source": "Insider"
     }
+
 ];
 
 
@@ -145,7 +132,7 @@ $(function() {
     $themeButtons.on('click', function() {
         $themeButtons.removeClass().addClass('btn btn-primary');
         $(this).addClass('active');
-        $poster.removeClass('poster-theme1 poster-theme2 poster-theme3 poster-theme4')
+        $poster.removeClass('poster-theme1 poster-theme2 poster-theme3 poster-theme4 poster-theme5 poster-theme6 poster-theme7')
                     .addClass('poster-' + $(this).attr('id'));
     });
 

@@ -252,6 +252,58 @@ canvas {
                 height: @theme4-16x9-logo-height + @padding;
             }
         }
+
+        p.timestamp {
+            color: @theme4-credit-color; 
+        }
+    }
+
+    &.poster-theme5 {
+        background: @theme5-bg-color;
+        color: @theme5-text-color;
+        .logo-wrapper {
+            background: @theme5-bg-color;
+            color: @theme5-text-color;
+            background-image: @theme5-logo-path;
+            background-repeat: no-repeat;
+            background-size: @theme5-sq-logo-width @theme5-sq-logo-height;
+            width: 218px;
+            height: 120px;
+
+            .sixteen-by-nine& {
+                background-size: @theme5-16x9-logo-width @theme5-16x9-logo-height;
+                width: 218px;
+                height: 120px;
+            }
+        }
+
+        p.timestamp {
+            color: @theme5-credit-color; 
+        }
+    }
+
+    &.poster-theme6 {
+        background: @theme6-bg-color;
+        color: @theme6-text-color;
+        .logo-wrapper {
+            background: @theme6-bg-color;
+            color: @theme6-text-color;
+            background-image: @theme6-logo-path;
+            background-repeat: no-repeat;
+            background-size: @theme6-sq-logo-width @theme6-sq-logo-height;
+            width: @theme6-sq-logo-width;
+            height: @theme6-sq-logo-height;
+
+            .sixteen-by-nine& {
+                background-size: @theme6-16x9-logo-width @theme6-16x9-logo-height;
+                width: @theme6-16x9-logo-width;
+                height: @theme6-16x9-logo-height;
+            }
+        }
+
+        p.timestamp {
+            color: @theme6-credit-color; 
+        }
     }
 
 
@@ -284,10 +336,11 @@ canvas {
     }
 
     h2 {
+        font-family: @quote-font-family;
+        font-weight: @quote-font-weight;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-size: @base-font-size;
-        font-family: @condensed-font-family;
         margin-top: 0;
         margin-bottom: 1em;
         overflow: hidden;
@@ -307,6 +360,7 @@ canvas {
         display: block;
         overflow: visible;
 
+
         &:focus {
             border: none;
             outline: none;
@@ -320,6 +374,8 @@ canvas {
             text-indent: @list-text-indent;
             margin-left: @list-margin-left;
             margin-bottom: @list-margin-bottom;
+            font-family: @list-font-family;
+            font-weight: @list-font-weight;
 
 
             span {
@@ -338,7 +394,7 @@ canvas {
     }
 
     p.timestamp {
-        font-size: @base-font-size;
+        font-size: 12px;
         color: @timestamp-color;
         text-transform: uppercase;
         letter-spacing: 0.1em;
